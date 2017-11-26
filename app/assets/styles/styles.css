@@ -138,13 +138,13 @@ html {
 }
 
 .portfolio-project-container {
-    height: 100vh;
+    // height: 100vh;
     background-color: RGBA(246, 246, 246, 1.00);
     
 }
 
 .project-image-container {
-    height: 50%;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
