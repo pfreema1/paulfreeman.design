@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Average|Average+Sans|Fjalla+One');
+
+
+div {
+    // outline: 1px solid red;
+}
+
+html {
+    // font-family: 'Average', serif;
+    // font-family: 'Average Sans', sans-serif;
+    // font-family: 'Fjalla One', sans-serif;
+}
+
+.no-gutter {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+
+.container-shadow {
+    -webkit-box-shadow: 2px 3px 14px -4px rgba(0,0,0,0.25);
+    -moz-box-shadow: 2px 3px 14px -4px rgba(0,0,0,0.25);
+    box-shadow: 2px 3px 14px -4px rgba(0,0,0,0.25);
+}
+
+.jumbotron {
+    height: 100vh;
+    position: relative;
+}
+
+.jumbotron--background-image {
+    position: relative;
+    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 44%, hsla(0, 0%, 96%, 1)), url("../images/main-image_scaledDown_filter1.jpg");
+
+    background-size: cover;
+    background-position: 32% 0px;
+
+    display: flex;
+    align-items: center;
+
+    
+    
+}
+
+.home-text {
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 60px;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: right;
+    margin-top: 50px;
+    // position: fixed;
+    text-shadow: 1px 1px 6px rgba(150, 150, 150, .5);
+
+}
+
+.mobile-menu-container {
+    position: fixed;
+    left: 30px;
+    top: 30px;
+    height: 60px;
+    // padding-left: 60px;
+    width: 120px;
+    background-color: white;
+    cursor: pointer;
+    display: flex;
+    z-index: 9;
+}
+
+.mobile-logo {
+    background-color: black;
+    height: 100%;
+    width: 60px;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-logo__pf {
+    font-size: 40px;
+}
+
+.mobile-logo__d {
+    font-size: 20px;
+    align-self: flex-end;
+}
+
+
+.hamburger-container {
+    background-color: white;
+    height: 100%;
+    width: 60px;
+    position: relative;
+}
+
+.top-line, .middle-line, .bottom-line{
+    background-color: black;
+    height: 4px;
+    width: 30px;
+    position: absolute;
+    
+}
+
+.top-line {
+    top: 17px;
+    left: 15px;
+}
+
+.middle-line {
+    top: 27px;
+    left: 15px;
+}
+
+.bottom-line {
+    top: 37px;
+    left: 15px;
+}
+
+.blurb-container {
+    height: 100vh;
+    font-family: 'Average', serif;
+    color: RGBA(205, 205, 205, 1.00);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blurb {
+    text-align: center;
+    font-size: 19px;
+}
+
+.blurb strong {
+    color: black;
+    text-shadow: 1px 1px 6px rgba(150, 150, 150, .3);
+}
+
+.portfolio-project-container {
+    height: 100vh;
+    background-color: RGBA(246, 246, 246, 1.00);
+    
+}
+
+.project-image-container {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+.project-image-container img {
+    height: 100%;
+    width: auto;
+    margin: auto;
+    // filter: grayscale(100%);
+    // overflow: hidden;
+}
+
+.portfolio-header {
+    background-color: RGBA(246, 246, 246, 1.00);
+    text-align: center;
+    padding: 30px 0 20px 0;
+    font-family: 'Average', serif;
+    font-size: 19px;
+    position: relative;
+    top: 2px;
+    
+    // font-family: 'Average Sans', sans-serif;
+    // font-family: 'Fjalla One', sans-serif;
+}
+
+.project-description {
+    height: 50%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.project-description__header {
+    
+    // background-color: yellow;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 26px;
+    line-height: 24px;
+    padding: 30px 0;
+    
+}
+
+.project-description__description-text {
+    font-family: 'Average', serif;
+    line-height: 29px;
+    
+}
+
+
+
+.project-description__learn-more-button {
+    font-family: 'Fjalla One', sans-serif;
+    margin-top: 20px;
+    background-color: RGBA(221, 221, 221, 1.00);
+    height: 42px;
+    width: 135px;
+    vertical-align: center;
+    line-height: 42px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.project-description__learn-more-button span {
+    width: 15px;
+    height: 15px;
+    // background-color: RGBA(221, 221, 221, 1.00);
+    position: absolute;
+    transform: rotate(45deg);
+    top: 34px;
+    left: 51.5px;
+    display: none;
+    color: black;
+}
+
+.project-description__learn-more-button div {
+    color: black;
+}
+
+a {
+    text-decoration: none !important;
+    color: black;
+}
+
+.card-body {
+    background-color: RGBA(221, 221, 221, 1.00);
+    font-family: 'Average', serif;
+    line-height: 29px;
+    text-align: left;
+}
+
+.card {
+    border: none;
+}
+
+.card-header {
+    border: none;
+}
+
+.collapse-container {
+    margin-top: -14px;
+    z-index: 8;
+}
