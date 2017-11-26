@@ -7,7 +7,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="./assets/font-awesome-4.7.0/css/font-awesome.min.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
@@ -36,74 +38,39 @@
         </div>
 
         <div class="container header-container">
-            <h1 class="display-3 home-text">PAUL<br>
-                &nbsp;&nbsp;&nbsp;FREEMAN<br>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DESIGN
+            <h1 class="display-3 home-text">PAUL
+                <br> &nbsp;&nbsp;&nbsp;FREEMAN
+                <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DESIGN
             </h1>
-            
+
         </div>
     </div>
 
     <div class="container-fluid blurb-container">
+        <div class="my-picture-container">
+            <img class="container-shadow" src="./assets/images/pictureOfMe.png" alt="Picture of Paul Freeman">
+        </div>
         <div class="blurb">
-            Hi, I'm Paul.<br>
-            I love coding.<br>
-            I love good design.<br>
-            Let's create something <strong>beautiful.</strong>
+            Hi, I'm Paul.
+            <br> I love coding.
+            <br> I love good design.
+            <br> Let's create something
+            <strong>beautiful.</strong>
         </div>
     </div>
 
-    <div class="container-fluid portfolio-header">
+    <div class="container-fluid portfolio-header box-shadow-top">
         <strong>Latest Work</strong>
     </div>
-
-
-
-    
-    <div id="exampleAccordion" data-children=".item">
-        <div class="item">
-          <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">
-            Toggle item
-          </a>
-          <div id="exampleAccordion1" class="collapse show" role="tabpanel">
-            <p class="mb-3">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget tristique massa. Aliquam lacinia rhoncus nibh quis ornare.
-            </p>
-          </div>
-        </div>
-        <div class="item">
-          <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2">
-            Toggle item 2
-          </a>
-          <div id="exampleAccordion2" class="collapse" role="tabpanel">
-            <p class="mb-3">
-              Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            </p>
-          </div>
-        </div>
-      </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 
     <!-- PORTFOLIO PROJECT -->
-    <div class="container-fluid portfolio-project-container container-shadow no-gutter">
-        
-        <div class="project-image-container">
+    <div class="container-fluid portfolio-project-container container-shadow">
+
+        <div class="project-image-container container-shadow">
             <img src="./assets/images/riversideApp_image_color.jpg" alt="Climbing Wall App Image">
         </div>
         <div class="project-description">
@@ -111,10 +78,10 @@
                 CLIMBING WALL APP
             </div>
             <div class="project-description__description-text">
-                A dynamic web app for the climbers of High Point Riverside.  Allows users to create and upload problems for the training wall.
+                A dynamic web app for the climbers of High Point Riverside. Allows users to create and upload problems for the training wall.
             </div>
 
-            
+
 
             <div id="accordion" role="tablist">
                 <div class="card">
@@ -122,21 +89,27 @@
                         <h5 class="mb-0">
                             <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <div class="project-description__learn-more-button container-shadow" id="exampleAccordion" data-children=".item">
-                                        <div class="item">
-                                                <span class="container-shadow"></span>
-                            
-                                            LEARN MORE&nbsp;&nbsp;&#9662;
-                                        </div>               
+                                    <div class="item">
+                                        <span class="container-shadow"></span>
+
+                                        LEARN MORE
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                     </div>
+                                </div>
                             </a>
                         </h5>
                     </div>
-                
+
                     <div id="collapseOne" class="collapse collapse-container" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
-                            Remembering all of the routes I made up for training was starting to become difficult, so I decided to make it easier!  <br><br>
-                            I used this app as an opportunity to sharpen my Vanilla JS skills, and to dip my toes into working with a database using PHP/MySql. <br><br>
-                            <strong>Tech</strong><br>
+                            Remembering all of the routes I made up for training was starting to become difficult, so I decided to make it easier!
+                            <br>
+                            <br> I used this app as an opportunity to sharpen my Vanilla JS skills, and to dip my toes into working
+                            with a database using PHP/MySql.
+                            <br>
+                            <br>
+                            <strong>Tech</strong>
+                            <br>
                             <ul>
                                 <li>HTML5</li>
                                 <li>CSS3</li>
@@ -144,13 +117,13 @@
                                 <li>MySql</li>
                                 <li>Hammer.js</li>
                                 <li>Animate.css</li>
-                                
+
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
     </div>
@@ -158,23 +131,21 @@
 
 
 
-
     <!-- PORTFOLIO PROJECT -->
+    <div class="container-fluid portfolio-project-container portfolio-project-container--add-t-padding container-shadow">
 
-    <div class="container-fluid portfolio-project-container container-shadow no-gutter">
-            
-        <div class="project-image-container">
-            <img src="./assets/images/riversideApp_image_color.jpg" alt="Climbing Wall App Image">
+        <div class="project-image-container container-shadow">
+            <img src="./assets/images/clearViewEscapes.jpg" alt="Clear View Escapes Image">
         </div>
         <div class="project-description">
             <div class="project-description__header">
-                CLIMBING WALL APP
+                CLEAR VIEW ESCAPES
             </div>
             <div class="project-description__description-text">
-                A dynamic web app for the climbers of High Point Riverside.  Allows users to create and upload problems for the training wall.
+                A travel site optimized for mobile devices and featuring clean design principles.
             </div>
 
-            
+
 
             <div id="accordion" role="tablist">
                 <div class="card">
@@ -182,42 +153,152 @@
                         <h5 class="mb-0">
                             <a data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                                 <div class="project-description__learn-more-button container-shadow" id="exampleAccordion" data-children=".item">
-                                        <div class="item">
-                                                <span class="container-shadow"></span>
-                            
-                                            LEARN MORE 
-                                        </div>               
+                                    <div class="item">
+                                        <span class="container-shadow"></span>
+
+                                        LEARN MORE
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                     </div>
+                                </div>
                             </a>
                         </h5>
                     </div>
-                
+
                     <div id="collapseTwo" class="collapse collapse-container" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
                         <div class="card-body">
-                            Remembering all of the routes I made up for training was starting to become difficult, so I decided to make it easier!  <br><br>
-                            I used this app as an opportunity to sharpen my Vanilla JS skills, and to dip my toes into working with a database using PHP/MySql. <br><br>
-                            <strong>Tech</strong><br>
+                            This is a mock travel site I made with the intention of maximizing my workflow.
+                            <br>
+                            <br> I learned about the benefits of version control using git, automating tasks using gulp and webpack,
+                            and the usefulness of the BEM methodology.
+                            <br>
+                            <br>
+                            <strong>Tech</strong>
+                            <br>
                             <ul>
                                 <li>HTML5</li>
-                                <li>CSS3</li>
-                                <li>PHP</li>
-                                <li>MySql</li>
-                                <li>Hammer.js</li>
-                                <li>Animate.css</li>
-                                
+                                <li>SASS</li>
+                                <li>JS (ES6)</li>
+
+
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
 
     </div>
     <!-- END PORTFOLIO PROJECT -->
 
+    <!-- PORTFOLIO PROJECT -->
+    <div class="container-fluid portfolio-project-container portfolio-project-container--add-t-padding add-b-margin container-shadow">
+
+        <div class="project-image-container container-shadow">
+            <img src="./assets/images/driftRacerVrSS.png" alt="Drift Racer VR Screenshot">
+        </div>
+        <div class="project-description">
+            <div class="project-description__header">
+                DRIFT RACER VR
+            </div>
+            <div class="project-description__description-text">
+                A drift racing game developed for the Google Daydream Mobile VR platform.
+            </div>
 
 
+
+            <div id="accordion" role="tablist">
+                <div class="card">
+                    <div class="card-header" role="tab" id="headingThree">
+                        <h5 class="mb-0">
+                            <a data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                <div class="project-description__learn-more-button container-shadow" id="exampleAccordion" data-children=".item">
+                                    <div class="item">
+                                        <span class="container-shadow"></span>
+
+                                        LEARN MORE
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        </h5>
+                    </div>
+
+                    <div id="collapseThree" class="collapse collapse-container" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body">
+                            Drift Racer VR is the second game I have released on the Google Play Store.
+                            <br>
+                            <br> I love VR technology and racing games are a great immersive experience. I wanted to create a
+                            game that had depth in the gameplay, as a majority of mobile VR titles seemed too easy at the
+                            time.
+                            <br>
+                            <br> The process of creating this game taught me two important things: OOP and learning to see a
+                            project through to the end.
+                            <br>
+                            <br>
+                            <strong>Tech</strong>
+                            <br>
+                            <ul>
+                                <li>C#</li>
+                                <li>Unity3D</li>
+                                <li>Blender</li>
+                                <li>Google VR SDK</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- END PORTFOLIO PROJECT -->
+
+    <!-- ABOUT ME SECTION -->
+    <div class="container-fluid about-section container-shadow no-gutter">
+        <div class="about-image-container">
+            <!-- <img src="./assets/images/wall-white-black-abstract-66905_scaledDown.jpeg" alt="abstract building picture"> -->
+            <div class="container about-section__text-container">
+                <strong>About Me</strong>
+                <br> I am a freelance web developer specializing in user-centric design. I create responsive websites using the
+                most current technologies to provide the best user experience while satisfying customer needs. My previous
+                employment and management experience provides me with leadership skills that allow me to effectively communicate
+                with others to achieve our goals. I am a fast learner who enjoys challenges and thrives in a fast paced,
+                goal oriented environment. I currently have experience working with HTML, CSS, JavaScript, PHP, and C#.
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- END ABOUT ME SECTION -->
+
+    <!-- CONTACT FORM -->
+
+    <div class="container contact-form-container">
+        <div class="contact-header-content-wrapper">
+            <span class="contact-form-header">CONTACT</span class="contact-form-header">
+    
+            <span class="contact-form-bar"></span>
+    
+            <span class="contact-form-text">Have a question or want to work together? Let's talk!</span>
+        </div>
+
+        <form action="/form_process.php">
+
+
+            <input type="text" id="name" name="name" placeholder="Name">
+
+
+            <input type="text" id="email" name="emailAddress" placeholder="Email">
+
+
+            <textarea id="subject" name="subject" placeholder="Your Message" style="height:200px"></textarea>
+
+            <div class="submit-wrapper"><input type="submit" value="Submit"></div>
+
+        </form>
+    </div>
 
 
 
