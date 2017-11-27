@@ -419,3 +419,13 @@ input[type=submit] {
 .submit-wrapper input {
     color: black;
 }
+
+.alert-danger {
+    background-color: RGBA(215, 46, 78, 1.00);
+    border-radius: 0;
+}
+
+.input-error {
+    box-shadow: 0 0 80px red;
+}
+
