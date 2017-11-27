@@ -61,21 +61,55 @@ html {
     height: 60px;
     // padding-left: 60px;
     width: 120px;
-    background-color: white;
+    // background-color: white;
     cursor: pointer;
-    display: flex;
+    // display: inline;
     z-index: 9;
 }
 
-.mobile-logo {
-    background-color: black;
+.logo-normal-colors {
+    background-color: RGBA(0,0,0,.85);
     height: 100%;
     width: 60px;
     font-family: 'Fjalla One', sans-serif;
     color: white;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+}
+
+.logo-inverted-colors {
+    background-color: RGBA(255,255,255,1);
+    height: 100%;
+    width: 60px;
+    font-family: 'Fjalla One', sans-serif;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    
+}
+
+.logo-inverted-colors--show {
+    opacity: 1;
+}
+
+.mobile-logo {
+    position: relative;
+    background-color: black;
+    height: 100%;
+    width: 60px;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-logo--move {
+    transform: translateX(60px);
 }
 
 .mobile-logo__pf {
@@ -89,10 +123,50 @@ html {
 
 
 .hamburger-container {
-    background-color: white;
+    background-color: RGBA(255,255,255,0.85);
     height: 100%;
     width: 60px;
-    position: relative;
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-container--move {
+    transform: translateX(-60px);
+}
+
+.close-wrapper {
+    height: 100%;
+    width: 60px;
+    background-color: black;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.close-wrapper--show {
+    opacity: 1;
+    
+}
+
+.close-wrapper .line1 {
+    height: 4px;
+    width: 40px;
+    position: absolute;
+    background-color: white;
+    top: 27px;
+    left: 10px;
+    transform: rotate(45deg);
+}
+
+.close-wrapper .line2 {
+    height: 4px;
+    width: 40px;
+    background-color: white;
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    transform: rotate(-45deg);
 }
 
 .top-line, .middle-line, .bottom-line{
@@ -116,6 +190,38 @@ html {
 .bottom-line {
     top: 37px;
     left: 15px;
+}
+
+.drop-down-menu {
+    background-color: RGBA(0,0,0,.85);
+    width: 260px;
+    // height: 80vh;
+    margin-top: -6px;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    font: 16px;
+    transform: scaleY(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: top center;
+    opacity: 0;
+    // transition-delay: 0.3s;
+}   
+
+.drop-down-menu--show {
+    transform: scaleY(1);
+    opacity: 1;
+}
+
+.menu-item {
+    padding: 30px 30px;
+}
+
+.menu-item:first-of-type {
+    padding-top: 60px;
+}
+
+.menu-item:last-of-type {
+    padding-bottom: 60px;
 }
 
 .blurb-container {
@@ -154,7 +260,7 @@ html {
 
 .portfolio-project-container {
     // height: 100vh;
-    background-color: RGBA(246, 246, 246, 1.00);
+    background-color: RGBA(238, 238, 238, 1.00);
     padding-top: 10px;
     padding-bottom: 40px;
 }
@@ -269,12 +375,13 @@ a {
 
 .card {
     border: none;
+    background-color: RGBA(238, 238, 238, 1.00);
 }
 
 .card-header {
     border: none;
     padding-bottom: 0;
-    
+    background-color: RGBA(238, 238, 238, 1.00);
 }
 
 .collapse-container {
@@ -428,4 +535,6 @@ input[type=submit] {
 .input-error {
     box-shadow: 0 0 80px red;
 }
+
+
 
