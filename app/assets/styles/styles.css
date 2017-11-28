@@ -556,11 +556,100 @@ input[type=submit] {
     box-shadow: 0 0 80px red;
 }
 
-.fa-external-link {
+.project-description__header .fa-external-link {
     font-size: 13px;
     
     position: relative;
     top: -13px;
+}
+
+svg {
+    width: 45px;
+    height: 45px;
+    margin-left: 15px;
+}
+
+.view-on-github-button {
+    background-color: RGBA(23, 21, 21, 1.00);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: 'Fjalla One', sans-serif;
+    height: 45px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.view-on-github-text {
+    margin-right: 25px;
+}
+
+.launch-app-button {
+    background-color: RGBA(23, 21, 21, 1.00);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: 'Fjalla One', sans-serif;
+    height: 45px;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.launch-app-button .fa-external-link {
+    font-size: 30px;
+    margin-left: 26px;
+}
+
+.launch-app-text {
+    margin-right: 39px;
+}
+
+.launch-website-text {
+    margin-right: 38px;
+}
+
+.watch-promo-text {
+    margin-right: 38px;
+}
+
+.fa-youtube-play {
+    font-size: 30px;
+    margin-left: 26px;
+    padding-bottom: 4px;
+}
+
+.google-play-badge {
+    height: 150%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.google-play-button {
+    // background-color: RGBA(23, 21, 21, 1.00);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    font-family: 'Fjalla One', sans-serif;
+    height: 45px;
+    margin-top: 40px;
+    margin-bottom: 30px;
 }
 
 
