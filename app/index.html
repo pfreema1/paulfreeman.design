@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="./assets/styles/styles.css">
 
+    <script src="./assets/scripts/lazysizes.min.js"></script>
 
 </head>
 
@@ -77,7 +78,7 @@
 
     <div class="container-fluid blurb-container">
         <div class="my-picture-container">
-            <img class="container-shadow" src="./assets/images/pictureOfMe.png" alt="Picture of Paul Freeman">
+            <img class="container-shadow lazyload" data-src="./assets/images/pictureOfMe.png" alt="Picture of Paul Freeman">
         </div>
         <div class="blurb">
             Hi, I'm Paul.
@@ -88,16 +89,19 @@
         </div>
     </div>
 
-    <div id="section-portfolio" class="container-fluid portfolio-header box-shadow-top scroll-reveal">
-        <strong>Latest Work</strong>
-    </div>
+    
 
 
     <!-- PORTFOLIO PROJECT -->
     <div class="container-fluid portfolio-project-container container-shadow scroll-reveal">
 
+        <div id="section-portfolio" class="container-fluid portfolio-header scroll-reveal">
+            <strong>LATEST WORK</strong>
+            <span class="latest-work-bar"></span>
+        </div>
+
         <div class="project-image-container container-shadow">
-            <img src="./assets/images/riversideApp_image_color.jpg" alt="Climbing Wall App Image">
+            <img class="lazyload" data-src="./assets/images/riversideApp_image_color.jpg" alt="Climbing Wall App Image">
         </div>
         <div class="project-description">
             <div class="project-description__header">
@@ -173,7 +177,7 @@
     <div class="container-fluid portfolio-project-container portfolio-project-container--add-t-padding container-shadow scroll-reveal">
 
         <div class="project-image-container container-shadow">
-            <img src="./assets/images/clearViewEscapes.jpg" alt="Clear View Escapes Image">
+            <img class="lazyload" data-src="./assets/images/clearViewEscapes.jpg" alt="Clear View Escapes Image">
         </div>
         <div class="project-description">
             <div class="project-description__header">
@@ -243,7 +247,7 @@
     <div class="container-fluid portfolio-project-container portfolio-project-container--add-t-padding add-b-margin container-shadow scroll-reveal">
 
         <div class="project-image-container container-shadow">
-            <img src="./assets/images/driftRacerVrSS.png" alt="Drift Racer VR Screenshot">
+            <img class="lazyload" data-src="./assets/images/driftRacerVrSS.png" alt="Drift Racer VR Screenshot">
         </div>
         <div class="project-description">
             <div class="project-description__header">
@@ -298,7 +302,7 @@
                                 <span class="watch-promo-text">WATCH PROMO</span>
                             </div>
                             <div class="google-play-button ">
-                                <img class="google-play-badge" src="./assets/images/googlePlayBadge.png" alt="">
+                                <img class="google-play-badge lazyload" data-src="./assets/images/googlePlayBadge.png" alt="">
                                 
                             </div>
                         </div>
@@ -313,8 +317,8 @@
 
     <!-- ABOUT ME SECTION -->
     <div id="section-about" class="container-fluid about-section container-shadow no-gutter">
-        <div class="about-image-container">
-            <!-- <img src="./assets/images/wall-white-black-abstract-66905_scaledDown.jpeg" alt="abstract building picture"> -->
+        <div class="about-image-container lazyload">
+            
             <div class="container about-section__text-container">
                 <strong>About Me</strong>
                 <br> I am a web developer specializing in user-centric design. I create responsive websites using the most current
@@ -332,7 +336,7 @@
 
     <!-- CONTACT FORM -->
 
-    <div id="section-contact" class="container contact-form-container">
+    <div id="section-contact" class="container-fluid contact-form-container">
         <div class="contact-header-content-wrapper">
             <span class="contact-form-header">CONTACT</span class="contact-form-header">
 

@@ -65,6 +65,12 @@ html {
     cursor: pointer;
     // display: inline;
     z-index: 9;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.mobile-menu-container--show {
+    opacity: 1;
 }
 
 .logo-normal-colors {
@@ -272,14 +278,14 @@ html {
     background-color: RGBA(238, 238, 238, 1.00);
     text-align: center;
     padding: 30px 0 20px 0;
-    font-family: 'Average', serif;
-    font-size: 19px;
+    // font-family: 'Average', serif;
+    font-size: 30px;
     position: relative;
     top: 2px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     // font-family: 'Average Sans', sans-serif;
-    // font-family: 'Fjalla One', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .portfolio-project-container--show {
@@ -299,6 +305,9 @@ html {
     justify-content: center;
     // padding-top: 20px;
     overflow: hidden;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .project-image-container img {
@@ -336,7 +345,9 @@ html {
 .project-description__description-text {
     font-family: 'Average', serif;
     line-height: 29px;
-    
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -344,7 +355,7 @@ html {
 .project-description__learn-more-button {
     font-family: 'Fjalla One', sans-serif;
     margin-top: 20px;
-    background-color: RGBA(221, 221, 221, 1.00);
+    background-color: RGBA(210, 210, 210, 1.00);
     height: 42px;
     width: 150px;
     vertical-align: center;
@@ -376,12 +387,14 @@ a {
 }
 
 .card-body {
-    background-color: RGBA(221, 221, 221, 1.00);
+    background-color: RGBA(210, 210, 210, 1.00);
     font-family: 'Average', serif;
     line-height: 29px;
     text-align: left;
     box-shadow: 0 4px 5px -2px RGBA(117, 117, 117, .3);
-    
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .card {
@@ -428,8 +441,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(180deg,RGBA(255, 255, 255, .3), 20%, black), url("../images/wall-white-black-abstract-66905_scaledDown.jpeg");
     
+    
+}
+
+.about-image-container.lazyloaded {
+    background-image: linear-gradient(180deg,RGBA(255, 255, 255, .3), 20%, black), url("../images/wall-white-black-abstract-66905_scaledDown.jpeg");
 }
 
 .about-image-container img {
@@ -448,6 +465,7 @@ a {
     font-family: 'Average', serif;
     line-height: 35px;
     padding: 0 40px;
+    max-width: 500px;
 }
 
 .about-section__text-container strong {
@@ -484,10 +502,14 @@ input[type=submit] {
 
 .contact-form-container form {
     margin-top: 10px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form-container form input {
     background-color: RGBA(247, 247, 247, 1.00);
+    border-radius: 0;
 }
 
 .contact-form-container form textarea {
@@ -497,7 +519,7 @@ input[type=submit] {
 .contact-form-text {
     font-family: 'Average', serif;
     color: white;
-    
+    padding-top: 5px;
 }
 
 .contact-form-header {
@@ -519,6 +541,18 @@ input[type=submit] {
     transform: scaleX(0);
     // opacity: 0;
     transition: all 3s ease-in-out;
+
+}
+
+.latest-work-bar {
+    width: 100px;
+    height: 4px;
+    background-color: black;
+    display: block;
+    transform: scaleX(0);
+    // opacity: 0;
+    transition: all 3s ease-in-out;
+    margin: 30px auto 30px auto;
 
 }
 

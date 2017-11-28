@@ -80,13 +80,30 @@ $(document).ready(function() {
         });
     });
 
-    var contactFormBarWaypoint = new Waypoint({
-        element: $(".contact-form-bar"),
-        handler: function() {
-            $(this.element).addClass("expand-bar");
-        },
-        offset: "80%"
+    var $elementsToAddExpandBarClass = $(".contact-form-bar, .latest-work-bar");
+
+    $elementsToAddExpandBarClass.each(function() {
+        var currentItem = this;
+        new Waypoint({
+            element: currentItem,
+            handler: function() {
+                $(currentItem).addClass("expand-bar");
+            },
+            offset: "80%"
+        });
     });
 
+    // var contactFormBarWaypoint = new Waypoint({
+    //     element: $(".contact-form-bar .latest-work-bar"),
+    //     handler: function() {
+    //         $(this.element).addClass("expand-bar");
+    //     },
+    //     offset: "80%"
+    // });
+
+
+    setTimeout(function() {
+        $(".mobile-menu-container").addClass("mobile-menu-container--show");
+    }, 1000);
 
 });
