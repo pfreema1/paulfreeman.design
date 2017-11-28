@@ -63,10 +63,30 @@ $(document).ready(function() {
         animateMenu();
     });
 
-    // function closeMenu() {
-    //     $(".drop-down-menu").removeClass("drop-down-menu--show");
-    //     animateMenu();
-    // }
+
+
+
+    //waypoint code for reveal on scroll
+    var $itemsToReveal = $(".scroll-reveal");
+
+    $itemsToReveal.each(function() {
+        var currentItem = this;
+        new Waypoint({
+            element: currentItem,
+            handler: function() {
+                $(currentItem).addClass("portfolio-project-container--show");
+            },
+            offset: "80%"
+        });
+    });
+
+    var contactFormBarWaypoint = new Waypoint({
+        element: $(".contact-form-bar"),
+        handler: function() {
+            $(this.element).addClass("expand-bar");
+        },
+        offset: "80%"
+    });
 
 
 });
