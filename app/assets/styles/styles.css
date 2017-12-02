@@ -43,9 +43,9 @@ html {
 }
 
 .home-text {
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 900;
-    line-height: 60px;
+    line-height: 80px;
     font-family: 'Fjalla One', sans-serif;
     text-align: right;
     margin-top: 50px;
@@ -270,6 +270,7 @@ html {
     padding-top: 10px;
     padding-bottom: 40px;
     opacity: 0;
+    // transform: scale(1.05);
     // transform: translateY(30px);
     transition: all 0.3s ease-in-out;
 }
@@ -283,6 +284,7 @@ html {
     position: relative;
     top: 2px;
     opacity: 0;
+    
     transition: opacity 0.3s ease-in-out;
     // font-family: 'Average Sans', sans-serif;
     font-family: 'Fjalla One', sans-serif;
@@ -290,6 +292,7 @@ html {
 
 .portfolio-project-container--show {
     opacity: 1;
+    // transform: scale(1);
     // transform: translateY(-30px);
 }
 
@@ -601,7 +604,10 @@ svg {
     width: 45px;
     height: 45px;
     margin-left: 15px;
+    max-height: 43px;
 }
+
+
 
 .view-on-github-button {
     background-color: RGBA(23, 21, 21, 1.00);
