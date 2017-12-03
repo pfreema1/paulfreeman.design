@@ -258,8 +258,14 @@ $(document).ready(function() {
 
     //menu animation
     $(".close-wrapper").on("click", function() {
-        animateMenu();
+      menuOpened = menuOpened == true ? false : true;
+      console.log("menuOpened:  " + menuOpened);
+      animateMenu();
+        
     });
+
+    var atTopOfPageTracker = true;
+    var menuOpened = false;
 
     function animateMenu() {
         $(".close-wrapper").toggleClass("close-wrapper--show");
@@ -267,6 +273,25 @@ $(document).ready(function() {
         $(".mobile-logo").toggleClass("mobile-logo--move");
         $(".logo-inverted-colors").toggleClass("logo-inverted-colors--show");
         $(".drop-down-menu").toggleClass("drop-down-menu--show");
+
+        if(menuOpened) {
+          $(".mobile-menu-container").removeClass("shrink-animation");
+        } else {
+          if(atTopOfPageTracker) {
+            $(".mobile-menu-container").removeClass("shrink-animation");
+          } else {
+            if(menuOpened) {
+              $(".mobile-menu-container").removeClass("shrink-animation");
+            } else {
+              $(".mobile-menu-container").addClass("shrink-animation");
+            }
+          }
+        }
+        // if(atTopOfPageTracker) {
+        //   $(".mobile-menu-container").removeClass("shrink-animation")
+        // } 
+        // if($(".mobile-menu-container").hasClass("shrink-animation"))
+        //   $(".mobile-menu-container").toggleClass("shrink-animation");
     }
 
     //handle clicking menu buttons - scroll!
@@ -346,5 +371,43 @@ $(document).ready(function() {
     setTimeout(function() {
         $(".mobile-menu-container").addClass("mobile-menu-container--show");
     }, 1000);
+
+    var lazyImages = $(".lazyload");
+
+    function refreshWaypoints() {
+      // console.log("heyo!");
+      lazyImages.on('load', function() {
+        Waypoint.refreshAll();
+      });
+    }
+
+    refreshWaypoints();
+
+    //my own lazy load
+    $(".myLazyLoad-init").each(function() {
+      $(this).attr('src', $(this).attr('data-src'));
+    });
+
+    //make it so you hit about me section and it downloads the other images
+    //and scale down mainmenu size!
+    var aboutSectionWaypoint = new Waypoint({
+      element: $(".blurb-container"),
+      handler: function(direction) {
+        // console.log("hit blurb!");
+        $(".myLazyLoad-secondLoad").each(function() {
+          $(this).attr('src', $(this).attr('data-src'));
+          // console.log("second wave going!");
+        });
+        
+        if(direction == "down") {
+          atTopOfPageTracker = false;
+          $(".mobile-menu-container").addClass("shrink-animation");
+        } else {
+          atTopOfPageTracker = true;
+          $(".mobile-menu-container").removeClass("shrink-animation");
+        }
+      },
+      offset: "80%"
+    });
 
 });

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Average|Average+Sans|Fjalla+One');
 
-$animationSpeed: .3s;
-$fadeInImageSpeed: 1s;
-
 
 div {
     // outline: 1px solid red;
@@ -47,9 +44,15 @@ html {
   position: fixed;
   font-size: 14vh;
   font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
   opacity: .25;  //make this back to .04
   pointer-events: none;
@@ -68,13 +71,20 @@ html {
   height: 100vh;
   position: absolute;
   font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: white;
   opacity: 1;
   pointer-events: none;
   z-index: 111;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(44%, hsla(0, 0%, 100%, 0)), to(hsla(0, 0%, 96%, .5)));
   background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 44%, hsla(0, 0%, 96%, .5));
 }
 
@@ -86,7 +96,6 @@ html {
 
 .container-shadow {
     -webkit-box-shadow: 2px 3px 14px -4px rgba(0,0,0,0.25);
-    -moz-box-shadow: 2px 3px 14px -4px rgba(0,0,0,0.25);
     box-shadow: 2px 3px 14px -4px rgba(0,0,0,0.25);
 }
 
@@ -94,7 +103,6 @@ html {
 
 .container-shadow--inset {
     -webkit-box-shadow: 2px 3px 14px -4px rgba(0,0,0,1.25) inset;
-    -moz-box-shadow: 2px 3px 14px -4px rgba(0,0,0,1.25) inset;
     box-shadow: 2px 3px 14px -4px rgba(0,0,0,1.25) inset;
 }
 
@@ -136,8 +144,10 @@ html {
     // display: inline;
     z-index: 900;
     opacity: 0;
-    transition: all $animationSpeed ease-in-out;
-    transform-origin: 50% 50% 0;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform-origin: 50% 50% 0;
+            transform-origin: 50% 50% 0;
 }
 
 .mobile-menu-container--show {
@@ -145,7 +155,8 @@ html {
 }
 
 .shrink-animation {
-    transform: scale(0.8) translateX(-30%);
+    -webkit-transform: scale(0.8) translateX(-30%);
+            transform: scale(0.8) translateX(-30%);
 }
 
 .logo-normal-colors {
@@ -154,11 +165,18 @@ html {
     width: 60px;
     font-family: 'Fjalla One', sans-serif;
     color: white;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: absolute;
-    transition: all $animationSpeed ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .logo-inverted-colors {
@@ -167,11 +185,18 @@ html {
     width: 60px;
     font-family: 'Fjalla One', sans-serif;
     color: black;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: absolute;
-    transition: all $animationSpeed ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
     opacity: 0;
     
 }
@@ -186,11 +211,13 @@ html {
     height: 100%;
     width: 60px;
     display: inline-block;
-    transition: all $animationSpeed ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .mobile-logo--move {
-    transform: translateX(60px);
+    -webkit-transform: translateX(60px);
+            transform: translateX(60px);
 }
 
 .mobile-logo__pf {
@@ -199,7 +226,8 @@ html {
 
 .mobile-logo__d {
     font-size: 20px;
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
 }
 
 
@@ -210,11 +238,13 @@ html {
     position: absolute;
     display: inline-block;
     right: 0;
-    transition: all $animationSpeed ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .hamburger-container--move {
-    transform: translateX(-60px);
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
 }
 
 .close-wrapper {
@@ -222,7 +252,8 @@ html {
     width: 60px;
     background-color: black;
     opacity: 0;
-    transition: all $animationSpeed ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .close-wrapper--show {
@@ -237,7 +268,8 @@ html {
     background-color: white;
     top: 27px;
     left: 10px;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 .close-wrapper .line2 {
@@ -247,7 +279,8 @@ html {
     position: absolute;
     top: 27px;
     left: 10px;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
 .top-line, .middle-line, .bottom-line{
@@ -281,15 +314,19 @@ html {
     font-family: 'Fjalla One', sans-serif;
     color: white;
     font: 16px;
-    transform: scaleY(0);
-    transition: all $animationSpeed ease-in-out;
-    transform-origin: top center;
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform-origin: top center;
+            transform-origin: top center;
     opacity: 0;
     // transition-delay: 0.3s;
 }   
 
 .drop-down-menu--show {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
     opacity: 1;
 }
 
@@ -310,10 +347,19 @@ html {
     font-family: 'Average', serif;
     color: RGBA(205, 205, 205, 1.00);
     background-color: RGBA(255, 255, 255, 1.00);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     // z-index: 10;
     position: relative;
     width: 100vw;
@@ -353,7 +399,8 @@ html {
     opacity: 0;
     // transform: scale(1.05);
     // transform: translateY(30px);
-    transition: all $fadeInImageSpeed ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 
@@ -368,7 +415,9 @@ html {
     top: 2px;
     opacity: 0;
     
-    transition: opacity $fadeInImageSpeed ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+    
+    transition: opacity 1s ease-in-out;
     // font-family: 'Average Sans', sans-serif;
     font-family: 'Fjalla One', sans-serif;
 }
@@ -386,9 +435,15 @@ html {
 
 .project-image-container {
     // height: 50vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     // padding-top: 20px;
     overflow: hidden;
     max-width: 450px;
@@ -410,7 +465,6 @@ html {
 
 .box-shadow-top {
     -webkit-box-shadow: 2px -2px 9px -4px rgba(0,0,0,0.25);
-    -moz-box-shadow: 2px -2px 9px -4px rgba(0,0,0,0.25);
     box-shadow: 2px -2px 9px -4px rgba(0,0,0,0.25);
 }
 
@@ -461,7 +515,8 @@ html {
     height: 15px;
     // background-color: RGBA(221, 221, 221, 1.00);
     position: absolute;
-    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
     top: 34px;
     left: 51.5px;
     display: none;
@@ -482,7 +537,8 @@ a {
     font-family: 'Average', serif;
     line-height: 29px;
     text-align: left;
-    box-shadow: 0 4px 5px -2px RGBA(117, 117, 117, .3);
+    -webkit-box-shadow: 0 4px 5px -2px RGBA(117, 117, 117, .3);
+            box-shadow: 0 4px 5px -2px RGBA(117, 117, 117, .3);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -525,7 +581,6 @@ a {
     background-color: black;
     height: 130vh;
     -webkit-box-shadow: 2px -2px 9px 1px rgba(0,0,0,0.25);
-    -moz-box-shadow: 2px -2px 9px 1px rgba(0,0,0,0.25);
     box-shadow: 2px -2px 9px 1px rgba(0,0,0,0.25);
     overflow: hidden;
     z-index: -10;
@@ -533,14 +588,21 @@ a {
 
 .about-image-container {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     
     z-index: 0;
 }
 
 .about-image-container.lazyloaded {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(RGBA(255, 255, 255, .3)), color-stop(20%), to(black));
     background-image: linear-gradient(180deg,RGBA(255, 255, 255, .3), 20%, black);
 
     
@@ -576,7 +638,8 @@ input[type=text], select, textarea {
     padding: 12px; /* Some padding */  
     border: 1px solid #ccc; /* Gray border */
     // border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
     margin-top: 6px; /* Add a top margin */
     margin-bottom: 16px; /* Bottom margin */
     font-family: 'Average', serif;
@@ -635,8 +698,10 @@ input[type=submit] {
     background-color: white;
     display: block;
     margin-bottom: 30px;
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
     // opacity: 0;
+    -webkit-transition: all 3s ease-in-out;
     transition: all 3s ease-in-out;
 
 }
@@ -646,8 +711,10 @@ input[type=submit] {
     height: 4px;
     background-color: black;
     display: block;
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
     // opacity: 0;
+    -webkit-transition: all 3s ease-in-out;
     transition: all 3s ease-in-out;
     margin: 30px auto 30px auto;
 
@@ -655,21 +722,35 @@ input[type=submit] {
 
 .expand-bar {
     // opacity: 1;
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
 }
 
 .contact-header-content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 50px 0;
 
 }
 
 .submit-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     padding-bottom: 30px;
     
 }
@@ -684,7 +765,8 @@ input[type=submit] {
 }
 
 .input-error {
-    box-shadow: 0 0 80px red;
+    -webkit-box-shadow: 0 0 80px red;
+            box-shadow: 0 0 80px red;
 }
 
 .project-description__header .fa-external-link {
@@ -706,9 +788,15 @@ svg {
 .view-on-github-button {
     background-color: RGBA(23, 21, 21, 1.00);
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -726,9 +814,15 @@ svg {
 .launch-app-button {
     background-color: RGBA(23, 21, 21, 1.00);
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
@@ -773,9 +867,15 @@ svg {
 .google-play-button {
     // background-color: RGBA(23, 21, 21, 1.00);
     color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 200px;
     margin-left: auto;
     margin-right: auto;
