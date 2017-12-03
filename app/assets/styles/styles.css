@@ -11,6 +11,56 @@ html {
     // font-family: 'Fjalla One', sans-serif;
 }
 
+#particles-js {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: 0;
+}
+
+.overlay-text-wrapper {
+/*   background-color: yellow; */
+    font-family: 'Fjalla One', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  font-size: 16vh;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: .05;  //make this back to .04
+  pointer-events: none;
+  z-index: 0;
+  text-align: right;
+}
+
+.overlay-text {
+    position: absolute;
+    right: 20px;
+}
+
+.overlay-with-gradient {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 111;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 44%, hsla(0, 0%, 96%, .5));
+}
+
 .no-gutter {
     padding-right: 0px;
     padding-left: 0px;
@@ -23,23 +73,26 @@ html {
     box-shadow: 2px 3px 14px -4px rgba(0,0,0,0.25);
 }
 
+
+
+.container-shadow--inset {
+    -webkit-box-shadow: 2px 3px 14px -4px rgba(0,0,0,1.25) inset;
+    -moz-box-shadow: 2px 3px 14px -4px rgba(0,0,0,1.25) inset;
+    box-shadow: 2px 3px 14px -4px rgba(0,0,0,1.25) inset;
+}
+
 .jumbotron {
     height: 100vh;
     position: relative;
+    padding: 0;
+    margin: 0;
+    z-index: -1;
 }
 
-.jumbotron--background-image {
+
+
+.container-fluid {
     position: relative;
-    background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 44%, hsla(0, 0%, 96%, 1)), url("../images/main-image_scaledDown_filter1.jpg");
-
-    background-size: cover;
-    background-position: 32% 0px;
-
-    display: flex;
-    align-items: center;
-
-    
-    
 }
 
 .home-text {
@@ -64,7 +117,7 @@ html {
     // background-color: white;
     cursor: pointer;
     // display: inline;
-    z-index: 9;
+    z-index: 900;
     opacity: 0;
     transition: all 0.5s ease-in-out;
 }
@@ -234,10 +287,14 @@ html {
     height: 100vh;
     font-family: 'Average', serif;
     color: RGBA(205, 205, 205, 1.00);
+    background-color: RGBA(255, 255, 255, 1.00);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    // z-index: 10;
+    position: relative;
+    width: 100vw;
 }
 
 .my-picture-container {
@@ -436,7 +493,7 @@ a {
     -moz-box-shadow: 2px -2px 9px 1px rgba(0,0,0,0.25);
     box-shadow: 2px -2px 9px 1px rgba(0,0,0,0.25);
     overflow: hidden;
-    
+    z-index: -10;
 }
 
 .about-image-container {
@@ -445,7 +502,7 @@ a {
     justify-content: center;
     align-items: center;
     
-    
+    z-index: 0;
 }
 
 .about-image-container.lazyloaded {
