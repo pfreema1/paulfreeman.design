@@ -11,6 +11,7 @@ html {
     // font-family: 'Fjalla One', sans-serif;
 }
 
+
 #particles-js {
   position: absolute;
   width: 100vw;
@@ -58,14 +59,15 @@ html {
   pointer-events: none;
   z-index: 0;
   text-align: right;
-  mix-blend-mode: hard-light;
-  pointer-events: none;
+//   mix-blend-mode: hard-light;
+//   pointer-events: none;
 }
 
 .overlay-text {
     position: absolute;
     right: 20px;
     // text-shadow: 22px 22px 22px black;
+    
 }
 
 .overlay-with-gradient {
@@ -548,6 +550,11 @@ a {
 
 .link--white {
     color: white;
+}
+
+#latestWorkSpan {
+    position: relative;
+    overflow: hidden;
 }
 
 .card {

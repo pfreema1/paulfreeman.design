@@ -101,13 +101,13 @@
     <div class="container-fluid portfolio-project-container container-shadow scroll-reveal">
 
         <div id="section-portfolio" class="container-fluid portfolio-header scroll-reveal">
-            <strong>LATEST WORK</strong>
+            <strong id="latestWorkSpan">LATEST WORK</strong>
             <span class="latest-work-bar"></span>
         </div>
 
         <div class="project-image-container">
             <a class="image-link-styling" target="_blank" href="http://www.paulfreeman.design/riverside/">
-                <img class="myLazyLoad-init container-shadow" data-src="./assets/images/riversideApp_image_color.jpg" alt="Climbing Wall App Image">
+                <img data-depth="1" class="myLazyLoad-init container-shadow" data-src="./assets/images/riversideApp_image_color.jpg" alt="Climbing Wall App Image">
             </a>
         </div>
         <div class="project-description">
@@ -328,12 +328,12 @@
                                 </div>
                             </a>
                             <a target="_blank" href="https://play.google.com/store/apps/details?id=com.dancingpinecone.daydream.DriftRacerVR">
-                            <div class="google-play-button ">
+                                <div class="google-play-button ">
 
-                                <img class="google-play-badge myLazyLoad-secondLoad" data-src="./assets/images/googlePlayBadge.png" alt="">
+                                    <img class="google-play-badge myLazyLoad-secondLoad" data-src="./assets/images/googlePlayBadge.png" alt="">
 
 
-                            </div>
+                                </div>
                             </a>
                         </div>
                     </div>
@@ -377,7 +377,7 @@
         <form id="contact" action="mail.php" method="POST">
             <input type="text" id="mail-name" name="name" placeholder="Name">
             <input type="text" id="mail-email" name="email" placeholder="E-mail">
-            <textarea class="textarea-styling" id="mail-message" name="message" placeholder="Your Message" ></textarea>
+            <textarea class="textarea-styling" id="mail-message" name="message" placeholder="Your Message"></textarea>
 
             <p class="form-message"></p>
 
@@ -414,10 +414,13 @@
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
         crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/CSSPlugin.min.js"></script> -->
+        <!-- <script src="./assets/scripts/smooth-scroll.min.js"></script> -->
 
-    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+    
 
-    <script src="./assets/scripts/particles.js"></script>
+    <script src="./assets/scripts/particles.min.js"></script>
 
     <script src="./assets/scripts/app.js"></script>
     <script src="./assets/scripts/jquery.waypoints.min.js"></script>
