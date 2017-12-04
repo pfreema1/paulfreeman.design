@@ -737,7 +737,10 @@ input[type=submit] {
 
 .contact-form-container {
     background-color: black;
+<<<<<<< HEAD
+=======
     padding: 30px;
+>>>>>>> remove-strap
 }
 
 .contact-form-container form {
