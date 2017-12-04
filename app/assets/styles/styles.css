@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Average|Average+Sans|Fjalla+One');
 
+$animationSpeed: .3s;
+$fadeInImageSpeed: 1s;
+
 
 div {
     // outline: 1px solid red;
@@ -25,7 +28,7 @@ html {
 }
 
 #particles-overlay-js {
-      position: absolute;
+  position: absolute;
   width: 100vw;
   height: 100vh;
   background-color: black;
@@ -42,16 +45,18 @@ html {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  font-size: 16vh;
+  font-size: 14vh;
   font-weight: 900;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  opacity: .05;  //make this back to .04
+  opacity: .55;  //make this back to .04
   pointer-events: none;
   z-index: 0;
   text-align: right;
+  mix-blend-mode: hard-light;
+  pointer-events: none;
 }
 
 .overlay-text {
@@ -133,11 +138,16 @@ html {
     // display: inline;
     z-index: 900;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all $animationSpeed ease-in-out;
+    transform-origin: 50% 50% 0;
 }
 
 .mobile-menu-container--show {
     opacity: 1;
+}
+
+.shrink-animation {
+    transform: scale(0.8) translateX(-30%);
 }
 
 .logo-normal-colors {
@@ -150,7 +160,7 @@ html {
     align-items: center;
     justify-content: center;
     position: absolute;
-    transition: all 0.3s ease-in-out;
+    transition: all $animationSpeed ease-in-out;
 }
 
 .logo-inverted-colors {
@@ -163,7 +173,7 @@ html {
     align-items: center;
     justify-content: center;
     position: absolute;
-    transition: all 0.3s ease-in-out;
+    transition: all $animationSpeed ease-in-out;
     opacity: 0;
     
 }
@@ -178,7 +188,7 @@ html {
     height: 100%;
     width: 60px;
     display: inline-block;
-    transition: all 0.3s ease-in-out;
+    transition: all $animationSpeed ease-in-out;
 }
 
 .mobile-logo--move {
@@ -202,7 +212,7 @@ html {
     position: absolute;
     display: inline-block;
     right: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all $animationSpeed ease-in-out;
 }
 
 .hamburger-container--move {
@@ -214,7 +224,7 @@ html {
     width: 60px;
     background-color: black;
     opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all $animationSpeed ease-in-out;
 }
 
 .close-wrapper--show {
@@ -274,7 +284,7 @@ html {
     color: white;
     font: 16px;
     transform: scaleY(0);
-    transition: all 0.3s ease-in-out;
+    transition: all $animationSpeed ease-in-out;
     transform-origin: top center;
     opacity: 0;
     // transition-delay: 0.3s;
@@ -309,6 +319,8 @@ html {
     // z-index: 10;
     position: relative;
     width: 100vw;
+    line-height: 50px;
+    
 }
 
 .my-picture-container {
@@ -343,8 +355,10 @@ html {
     opacity: 0;
     // transform: scale(1.05);
     // transform: translateY(30px);
-    transition: all 0.3s ease-in-out;
+    transition: all $fadeInImageSpeed ease-in-out;
 }
+
+
 
 .portfolio-header {
     background-color: RGBA(238, 238, 238, 1.00);
@@ -356,7 +370,7 @@ html {
     top: 2px;
     opacity: 0;
     
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity $fadeInImageSpeed ease-in-out;
     // font-family: 'Average Sans', sans-serif;
     font-family: 'Fjalla One', sans-serif;
 }
@@ -373,7 +387,7 @@ html {
 }
 
 .project-image-container {
-    height: 50vh;
+    // height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -385,11 +399,13 @@ html {
 }
 
 .project-image-container img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.image-link-styling {
     height: 100%;
-    width: auto;
-    margin: auto;
-    // filter: grayscale(100%);
-    // overflow: hidden;
 }
 
 
@@ -413,7 +429,7 @@ html {
     font-size: 26px;
     line-height: 24px;
     padding: 30px 0;
-    width: 50%;
+    // width: 50%;
     margin-left: auto;
     margin-right: auto;
     
@@ -474,6 +490,10 @@ a {
     margin-right: auto;
 }
 
+.link--white {
+    color: white;
+}
+
 .card {
     border: none;
     background-color: RGBA(238, 238, 238, 1.00);
@@ -498,19 +518,20 @@ a {
     top: -3px;
 }
 
-.add-b-margin {
-    margin-bottom: 30px;
+.add-b-spacing {
+    padding-bottom: 70px;
 }
 
 .about-section {
     // background-color: RGBA(74, 74, 74, 1.00);
     background-color: black;
-    height: 130vh;
+    height: 150vh;
     -webkit-box-shadow: 2px -2px 9px 1px rgba(0,0,0,0.25);
     -moz-box-shadow: 2px -2px 9px 1px rgba(0,0,0,0.25);
     box-shadow: 2px -2px 9px 1px rgba(0,0,0,0.25);
     overflow: hidden;
     z-index: -10;
+    margin-top: 50px;
 }
 
 .about-image-container {
@@ -522,8 +543,10 @@ a {
     z-index: 0;
 }
 
-.about-image-container.lazyloaded {
-    background-image: linear-gradient(180deg,RGBA(255, 255, 255, .3), 20%, black), url("../images/wall-white-black-abstract-66905_scaledDown.jpeg");
+.about-image-container {
+    background-image: linear-gradient(180deg,RGBA(255, 255, 255, .3), 20%, black);
+
+    
 }
 
 .about-image-container img {
@@ -543,6 +566,7 @@ a {
     line-height: 35px;
     padding: 0 40px;
     max-width: 500px;
+    // margin-bottom: 280px;
 }
 
 .about-section__text-container strong {
@@ -575,6 +599,7 @@ input[type=submit] {
 
 .contact-form-container {
     background-color: black;
+    // height: 100vh;
 }
 
 .contact-form-container form {
@@ -591,7 +616,9 @@ input[type=submit] {
 
 .contact-form-container form textarea {
     background-color: RGBA(247, 247, 247, 1.00);
+    // height: 10px;
 }
+
 
 .contact-form-text {
     font-family: 'Average', serif;
@@ -607,6 +634,10 @@ input[type=submit] {
     text-align: center;
     font-size: 30px;
     margin-bottom: 30px;
+}
+
+.textarea-styling {
+    height: 100px;
 }
 
 .contact-form-bar {
@@ -644,7 +675,7 @@ input[type=submit] {
     justify-content: center;
     align-items: center;
     padding: 50px 0;
-
+    margin-top: -10px;
 }
 
 .submit-wrapper {

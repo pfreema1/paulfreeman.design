@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
         crossorigin="anonymous">
 
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="./temp/styles/styles.css">
 
     <script src="./assets/scripts/lazysizes.min.js"></script>
 
@@ -26,60 +26,64 @@
 <body>
 
     <div id="particles-js"></div>
-   
+
     <div class="overlay-text-wrapper">
-        <div class="overlay-text">PAUL<br>FREEMAN<br>DESIGN<br></div>
+        <div class="overlay-text">PAUL
+            <br>FREEMAN
+            <br>DESIGN
+            <br>
+        </div>
     </div>
     <div class="overlay-with-gradient"></div>
 
     <div class="mobile-menu-container">
-            <div class="mobile-logo container-shadow">
-                <div class="logo-normal-colors">
-                    <div class="mobile-logo__pf">PF</div>
-                    <div class="mobile-logo__d">D</div>
-                </div>
-                <div class="logo-inverted-colors">
-                    <div class="mobile-logo__pf">PF</div>
-                    <div class="mobile-logo__d">D</div>
-                </div>
-
+        <div class="mobile-logo container-shadow">
+            <div class="logo-normal-colors">
+                <div class="mobile-logo__pf">PF</div>
+                <div class="mobile-logo__d">D</div>
             </div>
-            <div class="hamburger-container">
-                <div class="hamburger-wrapper container-shadow">
-                    <span class="top-line"></span>
-                    <span class="middle-line"></span>
-                    <span class="bottom-line"></span>
-                </div>
-                <div class="close-wrapper container-shadow">
-                    <span class="line1"></span>
-                    <span class="line2"></span>
-                </div>
-            </div>
-            <div class="drop-down-menu">
-                <div id="menu-home-button" class="container menu-item">
-                    HOME
-                </div>
-                <div id="menu-portfolio-button" class="container menu-item">
-                    PORTFOLIO
-                </div>
-                <div id="menu-about-button" class="container menu-item">
-                    ABOUT
-                </div>
-                <div id="menu-contact-button" class="container menu-item">
-                    CONTACT
-                </div>
+            <div class="logo-inverted-colors">
+                <div class="mobile-logo__pf">PF</div>
+                <div class="mobile-logo__d">D</div>
             </div>
 
         </div>
+        <div class="hamburger-container">
+            <div class="hamburger-wrapper container-shadow">
+                <span class="top-line"></span>
+                <span class="middle-line"></span>
+                <span class="bottom-line"></span>
+            </div>
+            <div class="close-wrapper container-shadow">
+                <span class="line1"></span>
+                <span class="line2"></span>
+            </div>
+        </div>
+        <div class="drop-down-menu">
+            <div id="menu-home-button" class="container menu-item">
+                HOME
+            </div>
+            <div id="menu-portfolio-button" class="container menu-item">
+                PORTFOLIO
+            </div>
+            <div id="menu-about-button" class="container menu-item">
+                ABOUT
+            </div>
+            <div id="menu-contact-button" class="container menu-item">
+                CONTACT
+            </div>
+        </div>
+
+    </div>
 
 
     <div id="section-home" class="jumbotron jumbotron-fluid jumbotron--background-image">
-   
+
     </div>
 
     <div class="container-fluid blurb-container">
         <div class="my-picture-container">
-            <img class="container-shadow lazyload" data-src="./assets/images/pictureOfMe.png" alt="Picture of Paul Freeman">
+            <img class="container-shadow myLazyLoad-init" data-src="./assets/images/pictureOfMe.png" alt="Picture of Paul Freeman">
         </div>
         <div class="blurb">
             Hi, I'm Paul.
@@ -90,7 +94,7 @@
         </div>
     </div>
 
-    
+
 
 
     <!-- PORTFOLIO PROJECT -->
@@ -101,12 +105,14 @@
             <span class="latest-work-bar"></span>
         </div>
 
-        <div class="project-image-container container-shadow">
-            <img class="lazyload" data-src="./assets/images/riversideApp_image_color.jpg" alt="Climbing Wall App Image">
+        <div class="project-image-container">
+            <a class="image-link-styling" target="_blank" href="http://www.paulfreeman.design/riverside/">
+                <img class="myLazyLoad-init container-shadow" data-src="./assets/images/riversideApp_image_color.jpg" alt="Climbing Wall App Image">
+            </a>
         </div>
         <div class="project-description">
             <div class="project-description__header">
-                <a target="_blank" href="http://www.paulfreeman.design/riverside/">CLIMBING WALL APP</a >
+                <a target="_blank" href="http://www.paulfreeman.design/riverside/">CLIMBING WALL APP</a>
                 <i class="fa fa-external-link" aria-hidden="true"></i>
             </div>
             <div class="project-description__description-text">
@@ -150,18 +156,23 @@
                                 <li>Hammer.js</li>
                                 <li>Animate.css</li>
                             </ul>
-                            <div class="launch-app-button container-shadow">
-                                <i class="fa fa-external-link" aria-hidden="true"></i>
-                                <span class="launch-app-text">LAUNCH APP</span>
-                            </div>
-                            <div class="view-on-github-button container-shadow">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-label="Github" role="img" viewBox="0 0 512 512">
-                                    <rect width="512" height="512" fill="#171515" rx="0%" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""=""></rect>
-                                    <path fill="#fff" d="M119 255c17 30 49 48 102 53-8 6-17 17-18 30-10 6-29 8-44 3-21-7-29-48-61-42-7 1-6 6 0 10 10 6 21 16 26 30 12 31 37 39 77 33v45c0 14-20 18-20 25 0 3 7 3 12 3 10 0 32-9 32-23 0-12 0-52 1-59 0-15 8-20 8-20s1 82-2 92c-4 13-10 11-10 17 0 9 26 2 35-17 7-15 4-95 3-94h7s0 37 1 53c0 17-1 39 9 50 7 7 29 19 29 8 0-6-12-12-12-29v-79c10 0 8 26 8 26l1 48s-2 18 19 25c8 3 24 3 25-1s-20-11-20-25v-49c0-36-5-49-22-60 53-5 86-18 102-53 10-20 12-44 12-62 0-50-24-67-29-76 7-38-1-55-5-60-14-5-48 12-66 24-30-9-94-8-118 2-44-31-67-26-67-26s-15 27-4 66c-15 18-25 31-26 65 0 27 3 44 15 67z"></path>
-                                </svg>
-                                <span class="view-on-github-text">VIEW ON GITHUB</span>
-                            </div>
+                            <a class="link--white" target="_blank" href="http://www.paulfreeman.design/riverside/">
+                                <div class="launch-app-button container-shadow">
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
 
+                                    <span class="launch-app-text">LAUNCH APP</span>
+
+                                </div>
+                            </a>
+                            <a class="link--white" target="_blank" href="https://github.com/pfreema1/climbing-wall-app">
+                                <div class="view-on-github-button container-shadow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-label="Github" role="img" viewBox="0 0 512 512">
+                                        <rect width="512" height="512" fill="#171515" rx="0%" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""=""></rect>
+                                        <path fill="#fff" d="M119 255c17 30 49 48 102 53-8 6-17 17-18 30-10 6-29 8-44 3-21-7-29-48-61-42-7 1-6 6 0 10 10 6 21 16 26 30 12 31 37 39 77 33v45c0 14-20 18-20 25 0 3 7 3 12 3 10 0 32-9 32-23 0-12 0-52 1-59 0-15 8-20 8-20s1 82-2 92c-4 13-10 11-10 17 0 9 26 2 35-17 7-15 4-95 3-94h7s0 37 1 53c0 17-1 39 9 50 7 7 29 19 29 8 0-6-12-12-12-29v-79c10 0 8 26 8 26l1 48s-2 18 19 25c8 3 24 3 25-1s-20-11-20-25v-49c0-36-5-49-22-60 53-5 86-18 102-53 10-20 12-44 12-62 0-50-24-67-29-76 7-38-1-55-5-60-14-5-48 12-66 24-30-9-94-8-118 2-44-31-67-26-67-26s-15 27-4 66c-15 18-25 31-26 65 0 27 3 44 15 67z"></path>
+                                    </svg>
+                                    <span class="view-on-github-text">VIEW ON GITHUB</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -177,14 +188,18 @@
     <!-- PORTFOLIO PROJECT -->
     <div id="middlePageTrigger" class="container-fluid portfolio-project-container portfolio-project-container--add-t-padding container-shadow scroll-reveal">
 
-        <div class="project-image-container container-shadow">
-            <img class="lazyload" data-src="./assets/images/clearViewEscapes.jpg" alt="Clear View Escapes Image">
+        <div class="project-image-container">
+            <a target="_blank" class="" href="https://pfreema1.github.io/travel-site/">
+                <img class="myLazyLoad-secondLoad container-shadow" data-src="./assets/images/clearViewEscapes.jpg" alt="Clear View Escapes Image">
+            </a>
         </div>
         <div class="project-description">
-            <div class="project-description__header">
-                CLEAR VIEW ESCAPES
-                <i class="fa fa-external-link" aria-hidden="true"></i>
-            </div>
+            <a class="" target="_blank" href="https://pfreema1.github.io/travel-site/">
+                <div class="project-description__header">
+                    CLEAR VIEW ESCAPES
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
+            </a>
             <div class="project-description__description-text">
                 A travel site optimized for mobile devices and featuring clean design principles.
             </div>
@@ -223,17 +238,21 @@
                                 <li>SASS</li>
                                 <li>JS (ES6)</li>
                             </ul>
-                            <div class="launch-app-button container-shadow">
-                                <i class="fa fa-external-link" aria-hidden="true"></i>
-                                <span class="launch-website-text">LAUNCH SITE</span>
-                            </div>
-                            <div class="view-on-github-button container-shadow">
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-label="Github" role="img" viewBox="0 0 512 512">
-                                    <rect width="512" height="512" fill="#171515" rx="0%" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""=""></rect>
-                                    <path fill="#fff" d="M119 255c17 30 49 48 102 53-8 6-17 17-18 30-10 6-29 8-44 3-21-7-29-48-61-42-7 1-6 6 0 10 10 6 21 16 26 30 12 31 37 39 77 33v45c0 14-20 18-20 25 0 3 7 3 12 3 10 0 32-9 32-23 0-12 0-52 1-59 0-15 8-20 8-20s1 82-2 92c-4 13-10 11-10 17 0 9 26 2 35-17 7-15 4-95 3-94h7s0 37 1 53c0 17-1 39 9 50 7 7 29 19 29 8 0-6-12-12-12-29v-79c10 0 8 26 8 26l1 48s-2 18 19 25c8 3 24 3 25-1s-20-11-20-25v-49c0-36-5-49-22-60 53-5 86-18 102-53 10-20 12-44 12-62 0-50-24-67-29-76 7-38-1-55-5-60-14-5-48 12-66 24-30-9-94-8-118 2-44-31-67-26-67-26s-15 27-4 66c-15 18-25 31-26 65 0 27 3 44 15 67z"></path>
-                                </svg>
-                                <span class="view-on-github-text">VIEW ON GITHUB</span>
-                            </div>
+                            <a target="_blank" class="link--white" href="https://pfreema1.github.io/travel-site/">
+                                <div class="launch-app-button container-shadow">
+                                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                                    <span class="launch-website-text">LAUNCH SITE</span>
+                                </div>
+                            </a>
+                            <a target="_blank" class="link--white" href="https://github.com/pfreema1/travel-site">
+                                <div class="view-on-github-button container-shadow">
+                                    <svg xmlns="http://www.w3.org/2000/svg" aria-label="Github" role="img" viewBox="0 0 512 512">
+                                        <rect width="512" height="512" fill="#171515" rx="0%" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""=""></rect>
+                                        <path fill="#fff" d="M119 255c17 30 49 48 102 53-8 6-17 17-18 30-10 6-29 8-44 3-21-7-29-48-61-42-7 1-6 6 0 10 10 6 21 16 26 30 12 31 37 39 77 33v45c0 14-20 18-20 25 0 3 7 3 12 3 10 0 32-9 32-23 0-12 0-52 1-59 0-15 8-20 8-20s1 82-2 92c-4 13-10 11-10 17 0 9 26 2 35-17 7-15 4-95 3-94h7s0 37 1 53c0 17-1 39 9 50 7 7 29 19 29 8 0-6-12-12-12-29v-79c10 0 8 26 8 26l1 48s-2 18 19 25c8 3 24 3 25-1s-20-11-20-25v-49c0-36-5-49-22-60 53-5 86-18 102-53 10-20 12-44 12-62 0-50-24-67-29-76 7-38-1-55-5-60-14-5-48 12-66 24-30-9-94-8-118 2-44-31-67-26-67-26s-15 27-4 66c-15 18-25 31-26 65 0 27 3 44 15 67z"></path>
+                                    </svg>
+                                    <span class="view-on-github-text">VIEW ON GITHUB</span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -245,16 +264,20 @@
     <!-- END PORTFOLIO PROJECT -->
 
     <!-- PORTFOLIO PROJECT -->
-    <div class="container-fluid portfolio-project-container portfolio-project-container--add-t-padding add-b-margin container-shadow scroll-reveal">
+    <div class="container-fluid portfolio-project-container portfolio-project-container--add-t-padding add-b-spacing container-shadow scroll-reveal">
 
-        <div class="project-image-container container-shadow">
-            <img class="lazyload" data-src="./assets/images/driftRacerVrSS.png" alt="Drift Racer VR Screenshot">
+        <div class="project-image-container">
+            <a target="_blank" href="https://www.youtube.com/watch?v=ucz8zWPI4mo">
+                <img class="myLazyLoad-secondLoad container-shadow" data-src="./assets/images/driftRacerVrSS.png" alt="Drift Racer VR Screenshot">
+            </a>
         </div>
         <div class="project-description">
-            <div class="project-description__header">
-                DRIFT RACER VR
-                <i class="fa fa-external-link" aria-hidden="true"></i>
-            </div>
+            <a target="_blank" href="https://www.youtube.com/watch?v=ucz8zWPI4mo">
+                <div class="project-description__header">
+                    DRIFT RACER VR
+                    <i class="fa fa-external-link" aria-hidden="true"></i>
+                </div>
+            </a>
             <div class="project-description__description-text">
                 A drift racing game developed for the Google Daydream Mobile VR platform.
             </div>
@@ -298,14 +321,20 @@
                                 <li>Blender</li>
                                 <li>Google VR SDK</li>
                             </ul>
-                            <div class="launch-app-button ">
-                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                                <span class="watch-promo-text">WATCH PROMO</span>
-                            </div>
+                            <a target="_blank" href="https://www.youtube.com/watch?v=ucz8zWPI4mo">
+                                <div class="launch-app-button ">
+                                    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                                    <span class="watch-promo-text">WATCH PROMO</span>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://play.google.com/store/apps/details?id=com.dancingpinecone.daydream.DriftRacerVR">
                             <div class="google-play-button ">
-                                <img class="google-play-badge lazyload" data-src="./assets/images/googlePlayBadge.png" alt="">
-                                
+
+                                <img class="google-play-badge myLazyLoad-secondLoad" data-src="./assets/images/googlePlayBadge.png" alt="">
+
+
                             </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -317,9 +346,9 @@
     <!-- END PORTFOLIO PROJECT -->
 
     <!-- ABOUT ME SECTION -->
-    <div id="section-about" class="container-fluid about-section container-shadow no-gutter">
-        <div class="about-image-container lazyload">
-            
+    <div id="section-about" class="container-fluid about-section no-gutter">
+        <div class="about-image-container lazyLoad">
+
             <div class="container about-section__text-container">
                 <strong>About Me</strong>
                 <br> I am a web developer specializing in user-centric design. I create responsive websites using the most current
@@ -348,7 +377,7 @@
         <form id="contact" action="mail.php" method="POST">
             <input type="text" id="mail-name" name="name" placeholder="Name">
             <input type="text" id="mail-email" name="email" placeholder="E-mail">
-            <textarea id="mail-message" name="message" placeholder="Your Message" style="height:200px"></textarea>
+            <textarea class="textarea-styling" id="mail-message" name="message" placeholder="Your Message" ></textarea>
 
             <p class="form-message"></p>
 
@@ -374,7 +403,7 @@
 
 
 
- 
+
 
 
     <!-- Optional JavaScript -->
@@ -388,7 +417,7 @@
 
     <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
 
-    <script src="./assets/scripts/particles.min.js"></script>
+    <script src="./assets/scripts/particles.js"></script>
 
     <script src="./assets/scripts/app.js"></script>
     <script src="./assets/scripts/jquery.waypoints.min.js"></script>
