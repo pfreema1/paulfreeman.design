@@ -8,6 +8,8 @@
                 -nesting
 
             v2.1:  -cssInject
+                    -inline comment stripper
+                
 *
 */
 
@@ -19,11 +21,13 @@ var postcss = require('gulp-postcss');
 var autoprefixer = require('autoprefixer');
 var cssvars = require('postcss-simple-vars');
 var nested = require('postcss-nested');
+var postCSS_InlineComment = require('postcss-inline-comment');
+
 
 
 gulp.task('styles', function() {
     return gulp.src('./app/assets/styles/styles.css')
-        .pipe(postcss([cssvars, nested, autoprefixer]))
+        .pipe(postcss([postCSS_InlineComment, cssvars, nested, autoprefixer]))
         .on('error', function(errorInfo) {
             console.log(errorInfo.toString());
             this.emit('end');
@@ -31,8 +35,10 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('./app/temp/styles'));
 });
 
+
+//dependencies inside the []!!!! - completes the tasks inside the bracket first before doing the cssInject!
 gulp.task('cssInject', ['styles'], function() {
-    return gulp.src('./app/temp/styles/**/*.css')
+    return gulp.src('./app/temp/styles/styles.css')
         .pipe(browserSync.stream());
 });
 
@@ -46,9 +52,9 @@ gulp.task('watch', function() {
         }
     });
 
-   
+    
 
-    watch('./app/*', function() {
+    watch('./app/index.html', function() {
         browserSync.reload();
     });
 
@@ -58,8 +64,13 @@ gulp.task('watch', function() {
 
     watch('./app/assets/styles/**/*.css', function() {
         gulp.start('cssInject');
-        browserSync.reload();
+        // gulp.start('styles');
+        // browserSync.reload();
     });
+
+
+
+    
 
 });
 
