@@ -1,18 +1,78 @@
-@import url('https://fonts.googleapis.com/css?family=Average|Average+Sans|Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Average|Fjalla+One');
 
 $animationSpeed: .3s;
 $fadeInImageSpeed: 1s;
 
 
-div {
-    // outline: 1px solid red;
+
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-html {
-    // font-family: 'Average', serif;
-    // font-family: 'Average Sans', sans-serif;
-    // font-family: 'Fjalla One', sans-serif;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #particles-js {
@@ -27,6 +87,19 @@ html {
   z-index: 0;
 
 }
+
+// #particles-2 {
+//     position: absolute;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: black;
+//   background-image: url("");
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   background-position: 50% 50%;
+//   z-index: 0;
+  
+// }
 
 #particles-overlay-js {
   position: absolute;
@@ -63,9 +136,15 @@ html {
 .overlay-text {
     position: absolute;
     right: 20px;
-    // text-shadow: 22px 22px 22px black;
     
+    letter-spacing: 3px;
+    // margin-top: 500px;
 }
+
+
+
+
+
 
 .overlay-with-gradient {
   width: 100vw;
@@ -80,6 +159,7 @@ html {
   pointer-events: none;
   z-index: 111;
   background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0) 44%, hsla(0, 0%, 96%, .5));
+  
 }
 
 .no-gutter {
@@ -109,6 +189,8 @@ html {
     margin: 0;
     z-index: -1;
 }
+
+
 
 
 
@@ -352,12 +434,15 @@ html {
 .portfolio-project-container {
     // height: 100vh;
     background-color: RGBA(238, 238, 238, 1.00);
-    padding-top: 10px;
+    // padding-top: 10px;
     padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
     opacity: 0;
     // transform: scale(1.05);
     // transform: translateY(30px);
     transition: all $fadeInImageSpeed ease-in-out;
+    // height: auto;
 }
 
 
@@ -419,7 +504,7 @@ html {
 }
 
 .project-description {
-    height: 50%;
+    // height: auto;
     text-align: center;
     padding-top: 20px;
 }
@@ -490,20 +575,23 @@ a {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    padding: 40px 30px 30px 30px;
 }
 
 .link--white {
-    color: white;
+    color: white; 
 }
-
+ 
 #latestWorkSpan {
     position: relative;
     overflow: hidden;
+    // color:red;
 }
-
+ 
 .card {
     border: none;
     background-color: RGBA(238, 238, 238, 1.00);
+    
 }
 
 .card-header {
@@ -515,6 +603,17 @@ a {
 .collapse-container {
     // margin-top: -14px;
     z-index: 8;
+    transform: scaleY(0);
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    transform-origin: center top;
+    height: 0;
+}
+
+.expand-accordion-anim {
+    transform: scaleY(1);
+    opacity: 1;
+    height: 100%;
 }
 
 .item i {
@@ -604,9 +703,12 @@ input[type=submit] {
     font-family: 'Fjalla One', sans-serif;
 }
 
+
+
 .contact-form-container {
     background-color: black;
     // height: 100vh;
+    padding: 30px;
 }
 
 .contact-form-container form {
